@@ -1,3 +1,4 @@
+import java.util.Scanner;
 class Node<T> {
   T val;
   Node<T> next;
@@ -12,6 +13,7 @@ class Source {
   public static int sumList(Node<Integer> head) {
     int total=0;
     while(head!=null){
+      //System.out.print(head.val+"-->");
       total+=head.val;
       head=head.next;
     }
@@ -19,6 +21,7 @@ class Source {
   }
 
   public static void main(String[] args) {
+    
     Node<Integer> a = new Node<>(2);
     Node<Integer> b = new Node<>(8);
     Node<Integer> c = new Node<>(3);
@@ -34,5 +37,7 @@ class Source {
     
     System.out.println("Sum of my list: ");
     System.out.println(Source.sumList(a));
+    
+
   }
 }
